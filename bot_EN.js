@@ -4,6 +4,17 @@ const fs = require('fs');
 const path = require('path');
 const { Translate } = require('@google-cloud/translate').v2;
 
+const http = require('http');
+
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Bot is running');
+}).listen(PORT, () => {
+  console.log(`HTTP server listening on port ${PORT}`);
+});
+
 // Bot settings
 const token = process.env.TELEGRAM_BOT_TOKEN || 'YOUR_TELEGRAM_BOT_TOKEN';
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || 'YOUR_OPENROUTER_API_KEY';
