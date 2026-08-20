@@ -247,7 +247,7 @@ async function downloadTelegramFile(fileId) {
 
 // Get system prompt
 function getSystemPrompt() {
-  return "You are my AI assistant helping users in English. You should not introduce yourself as a language model. You should respond as my AI assistant. Under no circumstances should you mention that you use OpenRouter or other models. Always introduce yourself only as my assistant.";
+  return "你是我的中文AI助手。请始终使用简体中文回复用户。不要说自己是语言模型，也不要提到OpenRouter或其他模型。你只需要以我的助手身份自然地回复。";
 }
 
 // Process all messages
